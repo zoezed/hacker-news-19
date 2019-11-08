@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { fetchUser, fetchPosts } from '../utils/api'
 import queryString from 'query-string'
 import Display from './Display'
+import Loading from './Loading'
 
 export default class User extends Component {
     state = {
@@ -50,7 +51,7 @@ export default class User extends Component {
         const { data, user, error, loadingUser, loadingPosts } = this.state
         return (
             <div>
-                {loadingUser || loadingPosts && <div>Loading</div>}
+                {loadingUser || loadingPosts && <Loading text="Loading"/>}
                 {error && <p>Error</p>}
                 {!loadingUser && <RenderUser user={user} />}               
                 {!loadingPosts && data.map((data) => (

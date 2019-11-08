@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 export default class Display extends Component {
     state = {
@@ -50,4 +51,8 @@ export default class Display extends Component {
         )
     }
 
+}
+
+Display.propTypes = {
+    data: PropTypes.object.isRequired
 }

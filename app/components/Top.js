@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { getNews } from '../utils/api'
 import Display from './Display'
+import Loading from './Loading'
 
 export default class Top extends Component {   
     state = {
@@ -38,7 +39,7 @@ export default class Top extends Component {
         
         return (
             <div>
-                {this.isLoading() && <div>Loading</div>}    
+                {this.isLoading() && <Loading text="Fetching posts"/>}    
                 {error && <p>Error</p>}
                 {data[0] && data.map((newsItem) => (
                    

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Display from './Display'
+import Loading from './Loading'
 import queryString from 'query-string'
 import { fetchItem, fetchComments } from '../utils/api'
 
@@ -44,6 +45,7 @@ export default class Post extends Component {
         
         return (
             <div>
+                {loadingPost && <Loading text="Fetching Post"/>}
                 {!loadingPost && <h1>{postInfo.title}</h1>}
                 {!loadingPost && <Display data={postInfo} />}
                 {!loadingComments && <ShowComments info={comments}/>}
