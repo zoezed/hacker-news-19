@@ -1,0 +1,44 @@
+{
+  "name": "hacker-news-19",
+  "version": "1.0.0",
+  "description": "React CW",
+  "main": "index.js",
+  "scripts": {
+    "build-windows": "SET NODE_ENV='production' && webpack",
+    "build": "NODE_ENV='production' && webpack",
+    "start": "webpack-dev-server"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
+  "author": "Zoe Z",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "query-string": "^6.8.3",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-icons": "^3.7.0",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.5",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
+  }
+}
